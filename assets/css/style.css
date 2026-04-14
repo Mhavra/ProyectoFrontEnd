@@ -1,6 +1,6 @@
 .layout {
   width: 100%;
-
+  min-height: 100vh;
   display: grid;
   grid:
     "header" auto
@@ -12,4 +12,8 @@
 
 .header { grid-area: header; }
 .main { grid-area: main; }
-footer { grid-area: footer; }
+
+#footer { 
+  grid-area: footer; 
+  min-height: 200px; 
+}
