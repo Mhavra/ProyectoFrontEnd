@@ -13,9 +13,12 @@
 .header { grid-area: header; }
 .main { grid-area: main; }
 
-footer { grid-area: footer; }
-footer {
+#promoCarousel .carousel-inner-main {
+    height: 350px;
+    width: auto auto;
 }
+
+footer { grid-area: footer; }
 
 footer .container {
     text-align: center;
