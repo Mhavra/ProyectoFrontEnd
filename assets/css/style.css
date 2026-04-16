@@ -145,6 +145,11 @@
 
 .main { grid-area: main; }
 
+#promoCarousel .carousel-inner-main {
+    height: 350px;
+    width: auto auto;
+}
+
 footer { grid-area: footer; }
 
 footer .container {
