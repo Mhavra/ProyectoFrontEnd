@@ -150,6 +150,139 @@
     width: auto auto;
 }
 
+footer { grid-area: footer; }
+
+footer .container {
+    text-align: center;
+    font-size: 12px;
+    padding: 6px;
+    letter-spacing: 1px;
+}
+
+.separador {
+    margin: 0 20px;
+}
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #616161;
+}
+
+.menu-domi {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-domi .btn {
+    position: relative;
+    border-color: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;    
+    color: #333;
+}
+
+.menu-domi .btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width 0.3s ease;
+
+}
+
+.menu-domi .btn:hover::after {
+    width: 100%;
+}
+
+.menu-item {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    margin: 0 40px;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    min-width: 180px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 8px 0;
+    z-index: 1000;
+}
+
+.submenu a {
+    display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background-color: #f5f5f5; 
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.acciones {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.acciones i {
+    font-family: "bootstrap-icons";
+    font-size: 24px;
+    color: rgb(94, 94, 94);
+    margin: 0 10px;
+}
+
+.icono {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.tooltip {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #bd7bca;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.icono:hover .tooltip {
+    opacity: 1;
+}
+
+.main { grid-area: main; }
+
+#promoCarousel .carousel-inner-main {
+    height: 350px;
+    width: auto auto;
+}
+
 footer {
   background-color: #dcd9ff;
 }
