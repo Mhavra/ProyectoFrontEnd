@@ -142,13 +142,17 @@
 .icono:hover .tooltip {
     opacity: 1;
 }
+/* Estilos para el main */
 
 .main { grid-area: main; }
 
 .section-slice-1{
-    position:relative; 
-    width:100%; 
-    height:100vh;
+    min-height: 90vh;
+    max-width: 1000px;   /* ajusta a lo que necesites */
+    margin: 0 auto;      /* centra la sección */
+    min-height: 100vh;
+    position: relative;
+
     img.img-fluid{
         width:100%; 
         height:100%; 
@@ -158,7 +162,18 @@
         left:0; 
         z-index:1;
     }
+    #hero-image{
+    
+    position: absolute;
+    inset: 0; 
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    }
 }
+
 
 
 /* overlay */
