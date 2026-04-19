@@ -233,11 +233,10 @@
   background-color: #f2e8dc;
 }
 
-/* estilos de los productos */
-/* ========= IMÁGENES MISMO TAMAÑO ========= */
+/* IMÁGENES MISMO TAMAÑO */
 .card-img-top {
   width: 100%;
-  aspect-ratio: 1 / 1; /* cuadradas */
+  aspect-ratio: 1 / 1;
   overflow: hidden;
 }
 
@@ -248,53 +247,22 @@
   display: block;
 }
 
-/* para celu, o si hachicamos la pantalla*/
-@media (max-width: 767px) {
-
-  .container.my-5 .row.g-4 {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 3rem;
-  }
-
-  .container.my-5 .col-6 {
-    flex: 0 0 75%;
-    max-width: 75%;
-    scroll-snap-align: center;
-  }
-
-  /* Ocultar scrollbar */
-  .container.my-5 .row.g-4::-webkit-scrollbar {
-    display: none;
-  }
+/* Ajuste visual del carousel */
+.carousel-item {
+  padding: 0.5rem 0;
 }
 
-/* las flechitas esas debajo de las cards */
-.carousel-arrows {
-  display: none;
+/* Flechas más visibles en desktop */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
 }
 
+/* MÓVIL: deja el comportamiento normal */
 @media (max-width: 767px) {
-  .carousel-arrows {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .carousel-arrows span {
-    width: 40px;
-    height: 40px;
-    border: 1px solid #333;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    color: #333;
-    opacity: 0.6; /* estilo "desactivado" */
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.8;
   }
 }
 
