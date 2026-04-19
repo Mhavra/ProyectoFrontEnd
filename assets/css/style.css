@@ -233,6 +233,13 @@
   background-color: #f2e8dc;
 }
 
+/* el h1 y p de las cards de vintage */
+#promoVintage h1 {
+  font-size: 2.5rem;
+  color: #333;
+  padding-top: 40px;
+}
+
 /* IMÁGENES MISMO TAMAÑO */
 .card-img-top {
   width: 100%;
@@ -264,6 +271,32 @@
   .carousel-control-next {
     opacity: 0.8;
   }
+}
+/* Posicionar flechas más cerca de las esquinas */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;              /* más angostas */
+}
+
+.carousel-control-prev {
+  left: -0.40rem;          /* empuja hacia la izquierda */
+}
+
+.carousel-control-next {
+  right: -0.40rem;         /* empuja hacia la derecha */
+}
+
+/* Opcional: bajar un poco las flechas */
+.carousel-control-prev,
+.carousel-control-next {
+  align-items: center;
+}
+
+/* Íconos un poco más visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  transform: scale(1.2); 
 }
 
 
