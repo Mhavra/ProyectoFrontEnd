@@ -150,66 +150,50 @@
     width: auto auto;
 }
 
-footer {
-  background-color: #dcd9ff;
+footer { grid-area: footer; }
+
+footer .container {
+    text-align: center;
 }
 
-footer img.logo-empresa {
-  width: 150px;
+footer img {
+    width: 150px;
 }
 
 footer h5 {
-  margin-top: 10px;
-  color: purple; 
-}
-
-footer ul li a img.icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 30px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-footer ul li a:hover img.icon {
-  opacity: 0.8;
-  transform: scale(1.1);
-}
-
-.footer-title {
-  font-size: 30px;
-  color: purple;
-  
+    margin-top: 15px;
+    font-weight: bold;
 }
 
 footer ul {
-  display: flex;       
-  gap: 20px;            
-  padding: 0;
-  margin: 0;
-  list-style: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 footer ul li {
-  margin: 0;            
+    margin: 10px 0;
 }
 
-.footer-link {
-  display: block;   
-  margin-bottom: 5px; 
-  color: purple;    
-  text-decoration: none;
+footer ul li a {
+    text-decoration: none;
+    color: purple;
+    background-image: url('../img/Papel_Bottom.webp');
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-.footer-link:hover {
-  text-decoration: underline;
+footer ul li a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
-footer p.text-center {
-  color: purple;   
-}
-
-footer .col-md-4.text-right p {
-  color: purple;
-  margin-bottom: 5px; 
-
+footer p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 0.9rem;
 }
