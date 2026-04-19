@@ -150,8 +150,8 @@
 
 .section-slice-1{
     min-height: 90vh;
-    max-width: 1000px;   /* ajusta a lo que necesites */
-    margin: 0 auto;      /* centra la sección */
+    max-width: 1000px;   
+    margin: 0 auto;      
     min-height: 100vh;
     position: relative;
 
@@ -232,6 +232,40 @@
 .hero-btn:hover {
   background-color: #f2e8dc;
 }
+
+/* IMÁGENES MISMO TAMAÑO */
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ajuste visual del carousel */
+.carousel-item {
+  padding: 0.5rem 0;
+}
+
+/* Flechas más visibles en desktop */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* MÓVIL: deja el comportamiento normal */
+@media (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.8;
+  }
+}
+
 
 footer { grid-area: footer; }
 
