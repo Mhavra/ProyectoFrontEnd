@@ -309,13 +309,29 @@ img {
   align-items: center;
 }
 
-/* Íconos un poco más visibles */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
   transform: scale(1.1); 
 }
 
+/*botones del carrito de card*/
+.btn-add-cart {
+  background-color: #7fd3db;   
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #63c1ca;
+}
+
+/*todo del footer*/
 
 footer { grid-area: footer; }
 
