@@ -14,7 +14,9 @@
 
 .header { 
     background: white;
-    color: rgb(0, 0, 0)
+    color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 10;
 }
 
 .top-bar {
@@ -72,8 +74,8 @@
 .menu-item {
     position: relative;
     z-index: 2;
-    display: inline-block;
-    margin: 0 40px;
+    display: inline-flex;
+    /*se elimino el margin que habia ps*/
 }
 
 .submenu {
@@ -86,7 +88,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
     padding: 8px 0;
-    z-index: 1000;
+    z-index: 1;
 }
 
 .submenu a {
@@ -98,7 +100,7 @@
 }
 
 .submenu a:hover {
-    background-color: #f5f5f5; 
+    background-color: #f5f5f5;
 }
 
 .menu-item:hover .submenu {
@@ -122,7 +124,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer; 
 }
 .tooltip {
     position: absolute;
@@ -148,8 +150,8 @@
 
 .section-slice-1{
     min-height: 90vh;
-    max-width: 1000px;   /* ajusta a lo que necesites */
-    margin: 0 auto;      /* centra la sección */
+    max-width: 1000px;   
+    margin: 0 auto;      
     min-height: 100vh;
     position: relative;
 
@@ -182,7 +184,7 @@
   position: absolute;
   inset: 0;
   background-color: rgba(255, 255, 255, 0.6);
-  
+  z-index: 1;   
 }
 .hero-banner{
     position:absolute; 
@@ -190,10 +192,11 @@
     left:0; 
     width:100%; 
     height:100%; 
-    z-index:2;
+    z-index:1;
 }
 /* contenido por encima */
 .hero-banner .container {
+  position: relative;
   z-index: 2;
   
 }
@@ -230,50 +233,161 @@
   background-color: #f2e8dc;
 }
 
+.hero,
+.hero-banner,
+.carousel-item {
+  overflow: hidden;
+}
+
+
+#promoVintage h1 {
+  font-size: 2.5rem;
+  color: #333;
+  padding-top: 40px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-img-top {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.carousel-item {
+  padding: 0.5rem 0;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden; /
+}
+
+/* Flechas  */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  transform: scale(1)
+}
+
+
+@media (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.8;
+  }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width:auto; 
+  padding: 0 0;             
+}
+
+.carousel-control-prev {
+  left: 0;          
+}
+
+.carousel-control-next {
+  right: 0;         
+}
+
+
+.carousel-control-prev,
+.carousel-control-next {
+  align-items: center;
+}
+
+/* Íconos un poco más visibles */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  transform: scale(1.1); 
+}
+
+
 footer { grid-area: footer; }
 
 footer .container {
     text-align: center;
+    font-size: 12px;
+    padding: 6px;
+    letter-spacing: 1px;
 }
 
-footer img {
-    width: 150px;
+
+footer {
+  background-color: #dcd9ff;
+}
+
+footer img.logo-empresa {
+  width: 150px;
 }
 
 footer h5 {
-    margin-top: 15px;
-    font-weight: bold;
+  margin-top: 10px;
+  color: purple; 
+}
+
+footer ul li a img.icon {
+  width: 40px;
+  height: 40px;
+  margin: 0px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+footer ul li a:hover img.icon {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.footer-title {
+  font-size: 30px;
+  color: purple;
+  
 }
 
 footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;       
+  gap: 25px;            
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
 }
 
 footer ul li {
-    margin: 10px 0;
+  margin: 0;            
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: purple;
-    background-image: url('../img/Papel_Bottom.webp');
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 5px;
+.footer-link {
+  display: block;   
+  margin-bottom: 5px; 
+  color: purple;    
+  text-decoration: none;
 }
 
-footer ul li a:hover {
-    opacity: 0.8;
-    transform: scale(1.05);
+.footer-link:hover {
+  text-decoration: underline;
 }
 
-footer p {
-    margin-top: 20px;
-    margin-bottom: 5px;
-    color: #fff;
-    font-size: 0.9rem;
+footer p.text-center {
+  color: purple;   
+}
+
+footer .col-md-4.text-right p {
+  color: purple;
+  margin-bottom: 5px; 
+
 }
