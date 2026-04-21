@@ -461,10 +461,21 @@ img {
   transform: translateY(-2px);
 
 }
-
-html {
-  scroll-behavior: smooth;
+ 
+.btn-ver-mas {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding-top: -0px;
 }
+
+.btn-ver-mas:hover {
+  background-color: #f2e8dc;
+  color: #000;
+}
+
 /*footer*/
 
 footer { grid-area: footer; }
