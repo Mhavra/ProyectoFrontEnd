@@ -11,7 +11,7 @@ Se plantea como una solución la creación de una plataforma donde la dueña pue
 Listado de secciones que tendrá el sitio web. 
 - Inicio
 - Nosotros
-
+- Novedades
 Integrantes del grupo con sus respectivos roles. 
 - Nayaret Larrondo  
 - Fram Salinas
