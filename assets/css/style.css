@@ -351,6 +351,7 @@ img {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
+  height: 380px;
 }
 
 .promo-box img {
@@ -358,6 +359,11 @@ img {
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.promo-box:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .promo-content {
