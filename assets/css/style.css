@@ -350,7 +350,7 @@ img {
 .promo-box {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 5px;
   height: 380px;
 }
 
