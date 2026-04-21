@@ -448,7 +448,10 @@ img {
   transform: translateY(-2px);
 
 }
- 
+
+html {
+  scroll-behavior: smooth;
+}
 /*footer*/
 
 footer { grid-area: footer; }
