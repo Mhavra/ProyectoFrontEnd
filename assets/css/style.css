@@ -10,6 +10,19 @@
   gap: 8px;
 }
 
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.container-fluid,
+.row {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 .header { grid-area: header; }
 
 .header { 
@@ -251,6 +264,21 @@ img {
   height: auto;
 }
 
+.card{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
 .card-img-top {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -260,7 +288,7 @@ img {
 .card-img-top img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
@@ -309,13 +337,66 @@ img {
   align-items: center;
 }
 
-/* Íconos un poco más visibles */
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: invert(1);
   transform: scale(1.1); 
 }
 
+/*botones del carrito de card*/
+.btn-add-cart {
+  background-color: #7fd3db;   
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-add-cart:hover {
+  background-color: #63c1ca;
+}
+
+/*Sección de promociones de los 3 bloques debajo del carrusle*/
+.promo-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 380px;
+}
+
+.promo-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.promo-box:hover img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.promo-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.promo-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/*todo del footer*/
 
 footer { grid-area: footer; }
 
